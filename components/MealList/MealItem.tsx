@@ -7,9 +7,9 @@ import {
   Image,
   Platform,
 } from 'react-native'
-import Meal from '../models/meal'
-import { MealDetailsScreenNavigationProp } from '../types'
-import MealDetails from './MealDetails'
+import Meal from '../../models/meal'
+import { MealDetailsScreenNavigationProp } from '../../types'
+import MealDetails from '../MealDetails'
 
 interface Props {
   item: Meal
@@ -19,7 +19,7 @@ function MealItem({ item }: Props) {
   const navigation = useNavigation<MealDetailsScreenNavigationProp>()
 
   function onPressHandler() {
-    navigation.navigate('MealDetails', {mealId: item.id})
+    navigation.navigate('MealDetails', { mealId: item.id })
   }
 
   return (
@@ -37,7 +37,7 @@ function MealItem({ item }: Props) {
             <Image source={{ uri: item.imageUrl }} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
           </View>
-          <MealDetails item={item} textStyle={{color: '#000'}}/>
+          <MealDetails item={item} textStyle={{ color: '#000' }} />
         </View>
       </Pressable>
     </View>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 8,
   },
-  
+
   button: {
     flex: 1,
   },

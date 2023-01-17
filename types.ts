@@ -33,7 +33,7 @@ export type CategoriesNavigationProp = NativeStackNavigationProp<
 //-----------
 
 export type StackNavigatorParamList = {
-  Categories: undefined
+  MealCategories: undefined
   Overview: { categoryId: string }
   MealDetails: { mealId: string }
 }
